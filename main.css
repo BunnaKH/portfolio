@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family:"Roboto Cn", sans-serif;
+    overflow-x: hidden;
+   
+}
+body{
+    overflow-x: hidden;
+    background: #F4F4F4;
+    
+}
+.container ul a , .brand a   {
+ text-decoration: none;
+ color: #eee;
+}
+.container ul li {
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+.container ul li:nth-child(1){
+animation-delay: 0s;
+}
+.container ul li:nth-child(2){
+animation-delay: 0.3s;
+}
+.container ul li:nth-child(3){
+animation-delay: 0.6s;  
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    align-items: center;
+   
+
+}
+.brand{
+    font-size: 2em;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+.brand span {
+    color: crimson;
+    font-weight: 600;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background:url(./img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+nav ul a {
+    padding: 0.7rem 0;
+    margin: 0 2rem;
+    letter-spacing: 2px;
+    position: relative;
+    
+}
+nav ul a:last-child{
+    margin-right: 0;
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: crimson;
+    left: 0;
+    transform: scale(0);
+    transition: all .5s;
+}
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scale(1);
+}
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0)
+    }
+}
+
+.text-section{
+    position: absolute;
+    height: auto;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    color: #eee;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 3.5rem;
+
+  
+}
+
+
+.text-section-none {
+    color: #eee;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 3.5rem;
+    display: none;
+   
+ 
+}
+
+.text-section h1{
+   
+    color:#AB00FF;
+}
+.text-color{
+ 
+    color: #eee;
+    
+}
+.p-text{
+    font-size: 0.5em;
+}
+.menu-toggle{
+    position: fixed;
+	color: #eeeeee;
+    font-size: 3rem;
+    top: 2.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+} 
+.overlay{
+	background-color: rgba(0,0,0,.98);
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+    opacity: 0;
+    
+
+}  
+
+
+
+/*main section*/
+/*About me*/
+
+
+.aboutme {
+    text-align: center;
+    margin-top: 3rem;
+    width: 100%;
+    margin-bottom: 2rem;  
+   
+}
+.grid-1 img {
+    position: relative;
+    width: 70%;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+  
+}
+.pho-name h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.grid-1 {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 3rem;
+    margin: 1.5rem 0 1.5rem 0;
+}
+.text {
+  
+    padding: 3rem 2rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.Aboutme-text,.project-text, .contact-text{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+.Aboutme-text span,
+.project-text span,
+.contact-text span {
+    color: #AB00FF;
+}
+
+/*Projects tabs*/
+.tabs .wrapper {
+    background: #522254;
+    padding-top: 1rem;
+    border-bottom: 4px solid #843888;
+    color: #C1BABF;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.tabs .main-wrapper{
+    width: 100%;
+    margin: auto;
+}
+.tabs {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.tabs p {
+    font-size: 1.5rem;
+    padding-top: 0.8rem;
+}
+.tabs .wrapper > div {
+    padding: 2rem 0;
+}
+.tabs .wrapper > div:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+.tab-border {
+    border-bottom: crimson 4px solid ;
+}
+
+/*Card*/
+
+.grid-container {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    text-align: center;
+    justify-content: center;
+ }
+
+ .card {
+    border-bottom: 1px solid #d3d3d3;
+    border-radius: .25rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 1px 0px 11px -4px rgba(0,0,0,0.75);
+  
+
+  }
+
+  .card:hover{
+      border-bottom: 2px solid crimson;
+  }
+  
+  
+  .bg-img {
+    background-size: cover;
+    min-height: 20rem;
+    background-position: center;
+    background-color: #ccc;
+  }
+  .bg-img img {
+      width: 100%;
+  }
+  
+  .content {
+    padding: 1.5rem;
+    
+  }
+  .content h4{
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  button:hover {
+    background: rgb(181, 150, 231);
+    color: #ffffff;
+  }.tab-content{
+      margin-bottom: 2rem;
+  }
+
+  #tab-1-content,
+  #tab-2-content {
+      display: none;
+  }
+
+  .show {
+	display: grid !important;
+	opacity: 1 !important;
+	transition: all 1000 ease-in;
+}
+footer .footer-wrapper {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.grid-wrapper {
+    background: #843888;
+    width: 100%;
+    padding: 5rem 1rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+footer {
+    background: rgba(228, 228, 228  );
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1.5px solid #fff;
+}
+
+.contact-me{
+    width: 100%;
+    text-align: center;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.social {
+    margin-right: 2rem;
+    
+}
+.social i {
+    color: #000;
+    cursor: pointer;
+    
+}
+.social i:hover{
+    transform: translateY(-10%);
+}
+.contact-wrapper{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.google-map {
+    width: 100%;
+    height: 50vh;
+    margin: 2rem 0;
+   
+}
+
+footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    
+}
+@media screen and (max-width: 700px){
+  
+    .menu-toggle{
+		display: block;
+    }
+    .text-section{
+        font-size: 2.5rem;
+    }
+   
+    
+	.nav-bar{
+        display: none;
+		padding-top: 0;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: auto;
+		text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin-top: 6rem;
+    }
+    nav ul li a {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    .brand{
+        padding-bottom: 3.5rem;
+        font-size: 5rem;
+    }
+
+    .overlay.menu-open,
+    nav.menu-open{
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+   
+    .grid-1 {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        padding: 3rem;
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    .Aboutme-text,.project-text,.contact-text{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    footer p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        
+    }
+    
+}
