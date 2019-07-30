@@ -38,7 +38,7 @@ animation-delay: 0.6s;
 .nav-bar{
     display: flex;
     justify-content: space-between;
-    padding-top: 1.5em;
+    padding-top: 5rem;
     text-transform: uppercase;
     font-size: 1.7rem;
     align-items: center;
@@ -155,7 +155,9 @@ nav ul li a:hover::after{
     
 }
 .p-text{
-    font-size: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
 }
 .menu-toggle{
     position: fixed;
@@ -216,16 +218,30 @@ nav ul li a:hover::after{
 }
 .text {
   
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     
 }
+.skills i {
+    margin: 2rem 2rem;;
+    font-size: 5rem;
+}
+ .fa-html5 
+{ color:#e34f26}
+.fa-css3-alt 
+{ color:#264de4}
+.fa-js-square 
+{ color:#f7df1e}
+.fa-bootstrap 
+{ color:#55057C }
+.fa-react 
+{ color:#00d8ff}
 
 .Aboutme-text,.project-text, .contact-text{
     font-size: 3.5rem;
     margin-bottom: 2rem;
-    font-weight: 800;
+    font-weight: 1000;
 }
 .Aboutme-text span,
 .project-text span,
@@ -385,10 +401,20 @@ footer {
 .social i {
     color: #000;
     cursor: pointer;
+    font-size: 5rem;
     
 }
 .social i:hover{
     transform: translateY(-10%);
+}
+.social .fa-github-square:hover{
+    color: #6e5494;
+}
+.social .fa-linkedin:hover{
+    color: #0077b5;
+}
+.social .fa-envelope-square:hover{
+    color: #fbbc05;
 }
 .contact-wrapper{
     width: 100%;
@@ -401,6 +427,10 @@ footer {
     height: 50vh;
     margin: 2rem 0;
    
+}
+.skills i {
+  margin: 2rem 2rem;;
+  font-size: 5rem;
 }
 
 footer p {
@@ -420,7 +450,7 @@ footer p {
     
 	.nav-bar{
         display: none;
-		padding-top: 0;
+		padding-top: 2rem;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
